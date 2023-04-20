@@ -211,6 +211,33 @@ usando display flex
 .container__botao:active{
     color : #000000;
 }   
+
+@media screen  and (max-width: 895px) {
+    .principal{
+        background-image: none;
+        height: 40vh;
+        margin: 0em 3em;
+        margin-top: 8em;
+        display: block;
+    }
+
+    .container__caixa{
+        margin: 0 2em;
+        font-size: 0.62rem;
+
+    }
+    .container__imagem{
+        width: 80%;
+       
+    }
+    .secundaria{
+        align-items: center;
+        margin: 0 2em;
+
+    }
+    
+}
+
 /*
 pseudo classe sao quando o mouse interage 
 
