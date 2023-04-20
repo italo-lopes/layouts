@@ -1,0 +1,248 @@
+/*
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap'); 
+                                    se for só no css fica assim 
+*/
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --background-primaria: #02050a;
+    --branco-principal : #fcfcfc;
+    --cinza-segundario :  #C0C0C0;
+    --botao-destaque : #167BF7;    
+    --font-tipo1 : 'Inter', sans-serif;
+    --font-tipo1-peso1 : 700;
+    --font-tipo1-peso2 : 400;
+    --botao-para-efeito : #9494ca;
+}
+body{
+    background-color: var(--background-primaria);
+    color: var(--branco-principal);
+    font-family: var(--font-tipo1);
+}
+.principal {
+    background-image: url("../assets/Background.png");
+    background-repeat: no-repeat;   
+    background-size: contain;
+    align-items: center;
+    text-align: center;
+}
+.container{
+     height: 100vh;
+     display: grid;
+     grid-template-columns: 50% 50%;
+}
+.container__botao{
+    background-color: var(--botao-destaque);
+    border-radius: 8px;
+    padding: 1rem;
+    display: block;
+    color: var(--branco-principal);
+    text-decoration: none;
+    margin: 1em;
+}
+/* pega as configuração do seu pai e faz algumas alteraçoes */
+.botao__segundario{
+    background-color: transparent;
+    boRder: 2px solid var(--branco-principal);
+    border-radius: 8px;
+
+}
+.container__aviso{
+    font-size: 0.75rem;
+    font-family: var(--font-tipo1);
+    font-weight: var(--font-tipo1-peso2);
+    color: var(--cinza-segundario);
+}
+.container__imagem{
+    margin: 1em 0 2em 0;
+}
+.container__caixa{
+    margin: 0 6em;
+}
+.segundario__imagem{
+    width:70%; /*responsividade*/
+}
+/* a imagem ocupa 70% de 50% da tela inteira(do seu pai)*/
+/*a div tem 50% da tela*/
+/* para centralizar horizontalmente*/
+.secundaria{
+    align-items: center;
+    margin: 0 10em;
+}
+.descricao__titulo{
+    font-weight: var(--font-tipo1-peso1);
+    font-size: 2.75em;
+    color: var(--branco-principal);
+    margin-bottom: 0.2em;
+}
+.descricao__texto{
+     color: var(--cinza-segundario);
+     margin-right: 2em; 
+}
+/* Muita reutilização de codigo */
+.botao__segundaria{
+    display: inline-block;
+
+}
+.texto__extra{
+    width: 70%;
+}
+
+/*usar quando o botao sair da formatação do grid 
+Quando quero determinar o tamnho 
+Usamos grid, align-item ,text-align
+.navbar__item--active {
+
+}
+em tem valores de=iferente pra cada elemento
+*/
+/*
+usando display flex
+*/
+.dispositivo{
+    text-align: center;
+    margin: 4rem 0;
+    /* Pega tudo q ta em linha e centraliza dentro dessa tag - class*/
+}
+.dispositivo__titulo{
+    margin:2em 0 ;
+    font-family: var(--font-tipo1);
+    font-weight: var(--font-tipo1-peso2);
+    font-size: 2em;
+    color: var(--branco-principal);
+}
+
+.dispositivo__lista{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style-type: none; /*tirar o ponto de li*/
+}
+.lista__item{
+    font-family: var(--font-tipo1);
+    font-weight: var(--font-tipo1-peso1);
+    font-size: 1.5em;
+    color: var(--cinza-segundario);
+}
+.dispositivo__img{
+    width: 100%;
+}
+/*
+============= OUTRAS DIVISAO =====================
+.dispositivo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+*/
+/*
+======================================
+.dispositivo{
+    display: block;  ja vem por padrao 
+    text-align: center;
+    margin: 2em;
+}
+
+.dispositivo__titulo{
+    font-family: var(--font-tipo1);
+    font-weight: var(--font-tipo1-peso2);
+    font-size: 1.75rem;
+    color: var(--branco-principal);
+    margin: 2em;
+}
+.dispositivo__lista{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.7em;
+    list-style-type: none;
+}
+.dispositivo_img{
+    width: 100%;
+}
+.lista__item{
+    font-family: var(--font-tipo1);
+    font-weight: var(--font-tipo1-peso1);
+    font-size: 1rem;
+    color: var(--cinza-segundario);
+}
+======================================
+*/
+.rodape{
+    text-align: center;
+    margin: 3em 0em;
+
+}
+.rodape__grupo__links{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2em;
+    margin: 0em 12em;
+    list-style-type: none;
+    text-decoration: none;
+}
+.rodape__link  a{
+    text-decoration: none;
+    color: var(--cinza-segundario);
+    padding: 1em;
+}
+.rodape__texto{
+    font-family: var(--font-tipo1);
+    font-weight: var(--font-tipo1-peso2);
+    font-size: 0.92rem;
+    color: var(--cinza-segundario);
+    margin : 2em 10em;
+
+}
+.rodape__link  a:hover{
+        color: var(--botao-destaque);
+}
+.rodape__link  a:active{
+    color: yellowgreen;
+}
+.container__botao:hover{
+    background-color: var(--botao-para-efeito);
+    color : #c71c1c;
+}   
+.container__botao:active{
+    color : #000000;
+}   
+/*
+pseudo classe sao quando o mouse interage 
+
+
+*/
+/*=========== como eu fiz  antes =============================
+.rodape{
+    text-align: center;
+    grid: 2em;
+    margin: 5em 7em;
+
+}
+.rodape__grupo__links{
+    display: flex;
+    justify-content: center;
+    grid: 5em;
+    margin: 3em 0;
+    list-style-type: none;
+}
+.rodape__link{
+    padding: 1.5em;
+    text-decoration: none;
+    color: var(--branco-principal);
+}
+    
+.rodape__texto__1, .rodape__texto__2{
+    font-family: var(--font-tipo1);
+    font-weight: var(--font-tipo1-peso2);
+    font-size: 0.92rem;
+    color: var(--cinza-segundario);
+}
+.rodape__texto{
+    margin: 0 8em;
+}
+*/

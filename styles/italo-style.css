@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+}
+:root{
+    --background-primaria: #410606;
+    --branco-principal : #FFFFFF;
+    --cinza-segundario :  #C0C0C0;
+    --botao-destaque : #167BF7;    
+    --font-tipo1 : 'Inter', sans-serif;
+    --font-tipo1-peso1 : 700;
+    --font-tipo1-peso2 : 400;
+}
+body{
+    background-color: var(--background-primaria);
+    color: var(--branco-principal);
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding: 2rem ; */
+    width: 30%;
+    margin: 7.8rem;
+    /* margin: 125px 728px 124px 52px; */
+    gap: 2rem;
+}
+.header__title{
+    text-align: center;
+    font-size: 1.75rem;
+    font-family: var(--font-tipo1);
+    font-weight: var(--font-tipo1-peso2);
+}
+.header__botoes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+    text-align: center;
+    width: 100%;
+    gap: 1rem;
+}
+.header__botao__normal,.header__botao__destaque {
+    padding: 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--branco-principal);
+    font-size: 1rem;
+    font-family: var(--font-tipo1);
+    font-weight: var(--font-tipo1-peso2);
+}
+.header__botao__destaque{
+    background-color: var(--botao-destaque);
+    font-family: var(--font-tipo1);
+    font-weight: var(--font-tipo1-peso2);
+}
+.header__botao__normal{
+    border: 1px  solid #FFFFFF;
+}
+.header__obs{
+    color: var(--cinza-segundario);
+    font-family: var(--font-tipo1);
+    font-weight: var(--font-tipo1-peso2);
+    font-size: 0.75rem;
+}
+
+
